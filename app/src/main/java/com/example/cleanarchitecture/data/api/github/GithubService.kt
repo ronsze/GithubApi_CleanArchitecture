@@ -13,7 +13,7 @@ interface GithubService {
         @Path("userLogin") userLogin: String
     ): Single<UserInfo>
 
-    @GET("{userLogin}/followers?per_page=20&")
+    @GET("{userLogin}/followers?per_page=30&")
     fun getFollowerList(
         @Path("userLogin") userLogin: String,
         @Query("page") page: Int

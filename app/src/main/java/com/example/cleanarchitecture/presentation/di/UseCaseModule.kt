@@ -3,6 +3,11 @@ package com.example.cleanarchitecture.presentation.di
 import com.example.cleanarchitecture.data.room.favorite.FavoriteDao
 import com.example.cleanarchitecture.domain.repository.github.GithubRepository
 import com.example.cleanarchitecture.domain.usecase.github.*
+import com.example.cleanarchitecture.domain.usecase.github.local.GetFavoriteByLoginUseCase
+import com.example.cleanarchitecture.domain.usecase.github.local.GetFavoriteListUseCase
+import com.example.cleanarchitecture.domain.usecase.github.local.InsertFavoriteUseCase
+import com.example.cleanarchitecture.domain.usecase.github.remote.GetFollowerListUseCase
+import com.example.cleanarchitecture.domain.usecase.github.remote.GetUserInfoUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

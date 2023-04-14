@@ -7,11 +7,11 @@ import androidx.room.Query
 @Dao
 interface FavoriteDao {
     @Insert
-    fun insert(entity: FavoriteEntity)
+    suspend fun insert(entity: FavoriteEntity)
 
     @Query("SELECT * FROM Favorite WHERE login = :login")
-    fun getFavoriteByLogin(login: String): FavoriteEntity?
+    suspend fun getFavoriteByLogin(login: String): FavoriteEntity?
 
     @Query("SELECT * FROM Favorite")
-    fun getAll(): List<FavoriteEntity>
+    suspend fun getAll(): List<FavoriteEntity>
 }

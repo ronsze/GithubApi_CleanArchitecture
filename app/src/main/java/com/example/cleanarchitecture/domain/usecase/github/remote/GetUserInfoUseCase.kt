@@ -1,4 +1,4 @@
-package com.example.cleanarchitecture.domain.usecase.github
+package com.example.cleanarchitecture.domain.usecase.github.remote
 
 import com.example.cleanarchitecture.domain.repository.github.GithubRepository
 

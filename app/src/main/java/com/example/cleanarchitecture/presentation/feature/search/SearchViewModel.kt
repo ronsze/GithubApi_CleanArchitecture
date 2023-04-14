@@ -3,7 +3,7 @@ package com.example.cleanarchitecture.presentation.feature.search
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.cleanarchitecture.data.model.github.UserInfo
-import com.example.cleanarchitecture.domain.usecase.github.GetUserInfoUseCase
+import com.example.cleanarchitecture.domain.usecase.github.remote.GetUserInfoUseCase
 import com.example.cleanarchitecture.presentation.feature.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers

@@ -3,7 +3,7 @@ package com.example.cleanarchitecture.presentation.feature.main.favorite
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.cleanarchitecture.data.room.favorite.FavoriteEntity
-import com.example.cleanarchitecture.domain.usecase.github.GetFavoriteListUseCase
+import com.example.cleanarchitecture.domain.usecase.github.local.GetFavoriteListUseCase
 import com.example.cleanarchitecture.presentation.feature.base.BaseViewModel
 import com.example.cleanarchitecture.presentation.feature.base.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,9 +23,7 @@ class FavoriteViewModel @Inject constructor(
 
     fun loadFavoriteList() {
         viewModelScope.launch(Dispatchers.Main) {
-            val list = withContext(Dispatchers.IO) {
-                getFavoriteListUseCase.execute()
-            }
+            val list = withContext(Dispatchers.IO) {getFavoriteListUseCase.execute() }
             favoriteList.addAll(list)
             _loadFavoriteListEvent.call()
         }

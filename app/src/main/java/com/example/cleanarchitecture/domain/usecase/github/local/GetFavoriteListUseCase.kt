@@ -1,7 +1,7 @@
-package com.example.cleanarchitecture.domain.usecase.github
+package com.example.cleanarchitecture.domain.usecase.github.local
 
 import com.example.cleanarchitecture.data.room.favorite.FavoriteDao
 
 class GetFavoriteListUseCase(private val favoriteDao: FavoriteDao) {
-    fun execute() = favoriteDao.getAll()
+    suspend fun execute() = favoriteDao.getAll()
 }
